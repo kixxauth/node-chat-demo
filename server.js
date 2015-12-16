@@ -22,7 +22,7 @@ app.use(staticServerMiddleware);
 routes.initialize(app, io);
 
 // Turn the server on:
-server.listen(8080, function () {
+server.listen(8888, function () {
 	var address = server.address();
 	console.log('server running on %s:%s', address.address, address.port);
 });
