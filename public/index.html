@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PBR Live Stream</title>
+		<meta name="description" content="PBR Live Stream">
+
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+
+		<meta http-equiv="cleartype" content="on">
+
+		<style type="text/css">
+		html {
+			-webkit-text-size-adjust: 100%;
+		}
+		body {
+			margin: 0;
+			font-size: 1em;
+			line-height: 1.4;
+			background-color: #ffffff;
+		}
+		a:active,
+		a:hover {
+			outline: 0;
+		}
+		</style>
+
+		<script type="text/javascript" src="vendor/jquery.min.js"></script>
+		<script type="text/javascript" src="vendor/socket.io.js"></script>
+
+	</head>
+	<body>
+		<div class="root">
+			<div class="display">
+			</div>
+			<div class="input">
+			<textarea id="input"></textarea>
+			</div>
+		</div>
+
+		<script type="text/javascript">
+		var socket = io.connect('');
+
+		socket.on('update', function (message) {
+			console.log('update: ' + message);
+		});
+
+		setTimeout(function () {
+			socket.emit('message', 'foobarbaz');
+		}, 5000);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,7 @@
+# Standard fare
+.git
+public/vendor/
+
+# node modules
+node_modules
+

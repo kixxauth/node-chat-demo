@@ -1,0 +1,23 @@
+{
+  "name"        : "node-chat-demo",
+  "version"     : "1.0.0",
+  "description" : "A quick demo server using sockets with Node.js.",
+  "author"      : "Kris Walker <kris@kixx.name> (http://www.kixx.name/)",
+  "homepage"    : "www.kixx.name",
+  "scripts"     : {
+    "lint": "xo",
+    "test": "npm run lint"
+  },
+  "repository"  : {
+    "type" : "git",
+    "url"  : "git://github.com/kixxauth/node-chat-demo.git"
+  },
+  "dependencies": {
+    "express"   : "4.13.3",
+    "socket.io" : "1.3.7"
+  },
+  "devDependencies": {
+    "xo" : "0.12.1"
+  },
+  "bugs": {"url": "https://github.com/kixxauth/node-chat-demo/issues"}
+}
